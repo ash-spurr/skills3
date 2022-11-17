@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Create an account</h1>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <p>You need to create an account before using this service</p>
+
+<p class="govuk-heading-s">Enter your email address</p>
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Email address"
+  },
+  classes: "govuk-input--width-20",
+  id: "Email-address",
+  name: "Email-address"
+}) }}
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Confirm your email address"
+  },
+  classes: "govuk-input--width-20",
+  id: "confirm-email-address",
+  name: "confirm-email-address"
+}) }}
+
+
+<p class="govuk-heading-s">Create a password<span class="govuk-caption-m">Your password should have at least 8 characters and not include your name or email address</span>
+</p>
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Password"
+  },
+  classes: "govuk-input--width-20",
+  id: "Password",
+  name: "Password",
+  type: "Password"
+}) }}
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Confirm your password"
+  },
+  classes: "govuk-input--width-20",
+  id: "confirm-password",
+  name: "confirm-password",
+  type: "Password"
+}) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
