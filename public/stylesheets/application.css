@@ -8544,3 +8544,14 @@ x:-moz-any-link {
     margin-bottom: 0;
   }
 }
+
+.autocomplete__wrapper * {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media print {
+  .autocomplete__wrapper * {
+    font-family: sans-serif;
+  }
+}

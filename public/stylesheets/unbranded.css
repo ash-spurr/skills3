@@ -8544,3 +8544,14 @@ x:-moz-any-link {
     margin-bottom: 0;
   }
 }
+
+.autocomplete__wrapper * {
+  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media print {
+  .autocomplete__wrapper * {
+    font-family: sans-serif;
+  }
+}

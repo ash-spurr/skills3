@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Create an account - your details</h1>
+
+      <form class="form" action="/privacypolicy" method="post">
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Full name"
+  },
+  classes: "govuk-input--width-20",
+  id: "full-name",
+  name: "full-name"
+}) }}
+
+
+
+<label class="govuk-label" for="department">Department</label>
+
+<select class="govuk-select" name="choose-country" id="choose-country">
+  <option value="territory:AE-AZ">Abu Dhabi</option>
+  <option value="country:AF">Afghanistan</option>
+  <option value="territory:AE-AJ">Ajman</option>
+  <option value="territory:XQZ">Akrotiri</option>
+  <option value="country:AL">Albania</option>
+  ...
+  <option value="country:ZM">Zambia</option>
+  <option value="country:ZW">Zimbabwe</option>
+  <option value="territory:AX">Åland Islands</option>
+</select>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
