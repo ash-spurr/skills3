@@ -30,19 +30,35 @@
 
 
 
-<label class="govuk-label" for="department">Department</label>
-
-<select class="govuk-select" name="choose-country" id="choose-country">
-  <option value="territory:AE-AZ">Abu Dhabi</option>
-  <option value="country:AF">Afghanistan</option>
-  <option value="territory:AE-AJ">Ajman</option>
-  <option value="territory:XQZ">Akrotiri</option>
-  <option value="country:AL">Albania</option>
-  ...
-  <option value="country:ZM">Zambia</option>
-  <option value="country:ZW">Zimbabwe</option>
-  <option value="territory:AX">Åland Islands</option>
+<label class="govuk-label" for="dept">Department</label>
+<select class="govuk-select" name="choose-dept" id="choose-dept">
+  <option value="dept:AE-AZ">Assurance, Finance and Controls</option>
+  <option value="dept:AE-AZ">Borders, Trade and Brexit Opportunities Unit</option>
+  <option value="dept:AE-AZ">C-19 Inquiry</option>
 </select>
+
+<main class="govuk-main-wrapper">
+
+<label class="govuk-label" for="job">Job title</label>
+<select class="govuk-select" name="choose-job" id="choose-job">
+  <option value="job:AE-AZ">Assurance, Finance and Controls</option>
+  <option value="job:AE-AZ">Borders, Trade and Brexit Opportunities Unit</option>
+  <option value="job:AE-AZ">C-19 Inquiry</option>
+</select>
+</main>
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Your line manager's email address"
+  },
+  classes: "govuk-input--width-20",
+  id: "lm-email",
+  name: "lm-email"
+}) }}
+
+
 
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

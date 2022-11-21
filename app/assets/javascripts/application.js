@@ -7,10 +7,13 @@ if (window.console && window.console.info) {
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
-  let selectElement = document.querySelector('#choose-country')
+  let selectElement = document.querySelector('#choose-dept') 
 
 accessibleAutocomplete.enhanceSelectElement({
   defaultValue: '',
   selectElement: selectElement
 })
+
+
+
 })
