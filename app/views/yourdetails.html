@@ -17,6 +17,7 @@
       <form class="form" action="/privacypolicy" method="post">
 
 
+
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
@@ -28,22 +29,42 @@
   name: "full-name"
 }) }}
 
-
-
-<label class="govuk-label" for="dept">Department</label>
-<select class="govuk-select" name="choose-dept" id="choose-dept">
-  <option value="dept:AE-AZ">Assurance, Finance and Controls</option>
-  <option value="dept:AE-AZ">Borders, Trade and Brexit Opportunities Unit</option>
-  <option value="dept:AE-AZ">C-19 Inquiry</option>
+<label class="govuk-label" for="job">Department</label>
+<select class="js-autocomplete" name="js-autocomplete" id="js-autocomplete">
+  <option value="null"></option>
+  <option value="job:AE-AZ">Assurance, Finance and Controls</option>
+  <option value="job:AE-AZ">Borders- Trade and Brexit Opportunities Unit</option>
+  <option value="job:AE-AZ">C-19 Inquiry</option>
+  <option value="job:AE-AZ">Cabinet Office Analysis</option>
+  <option value="job:AE-AZ">Chief Digital and Data Office</option>
+  <option value="job:AE-AZ">Chief Digital and Information Office</option>
+  <option value="job:AE-AZ">Chief Operating Officer office</option>
+  <option value="job:AE-AZ">Civil Service Commission</option>
+  <option value="job:AE-AZ">Civil Service Human Resources</option>
+  <option value="job:AE-AZ">Civil Service Modernisation and Reform Unit</option>
+  <option value="job:AE-AZ">Commercial Models</option>
+  <option value="job:AE-AZ">COP26</option>
 </select>
 
 <main class="govuk-main-wrapper">
-
 <label class="govuk-label" for="job">Job title</label>
-<select class="govuk-select" name="choose-job" id="choose-job">
-  <option value="job:AE-AZ">Assurance, Finance and Controls</option>
-  <option value="job:AE-AZ">Borders, Trade and Brexit Opportunities Unit</option>
-  <option value="job:AE-AZ">C-19 Inquiry</option>
+<select class="js-autocomplete" name="js-autocomplete" id="js-autocomplete">
+  <option value="null"></option>
+  <option value="job:AE-AZ">Application operations engineer</option>
+  <option value="job:AE-AZ">Business analyst</option>
+  <option value="job:AE-AZ">Business relationship manager</option>
+  <option value="job:AE-AZ">Change and release manager</option>
+  <option value="job:AE-AZ">Command and control centre manager</option>
+  <option value="job:AE-AZ">Content designer</option>
+  <option value="job:AE-AZ">Content strategist</option>
+  <option value="job:AE-AZ">Data analyst</option>
+  <option value="job:AE-AZ">Data architect</option>
+  <option value="job:AE-AZ">Data engineer</option>
+  <option value="job:AE-AZ">Data ethicist</option>
+  <option value="job:AE-AZ">Data scientist</option>
+  <option value="job:AE-AZ">Delivery manager</option>
+  <option value="job:AE-AZ">Development operations (DevOps) engineer</option>
+  <option value="job:AE-AZ">End user computing engineer</option>
 </select>
 </main>
 
@@ -51,11 +72,11 @@
 
 {{ govukInput({
   label: {
-    text: "Your line manager's email address"
+    text: "Your line managers email"
   },
   classes: "govuk-input--width-20",
-  id: "lm-email",
-  name: "lm-email"
+  id: "line manager email",
+  name: "line-manager-email"
 }) }}
 
 

@@ -2,18 +2,19 @@
 
 // Warn about using the kit in production
 if (window.console && window.console.info) {
-  window.console.info('GOV.UK Prototype Kit - do not use for production')
+	window.console.info('GOV.UK Prototype Kit - do not use for production')
 }
 
 $(document).ready(function () {
-  window.GOVUKFrontend.initAll()
-  let selectElement = document.querySelector('#choose-dept') 
+	window.GOVUKFrontend.initAll()
 
-accessibleAutocomplete.enhanceSelectElement({
-  defaultValue: '',
-  selectElement: selectElement
-})
+	// Upgrade any select with `.js-autocomplete` class
+	let autocompletes = document.querySelectorAll('.js-autocomplete')
 
-
-
+	autocompletes.forEach(autocomplete => {
+		accessibleAutocomplete.enhanceSelectElement({
+			defaultValue: '',
+			selectElement: autocomplete
+		})
+	})
 })
