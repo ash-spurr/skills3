@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Create an account - Current contract type</h1>
+
+      <p>Select your contract type. You may only choose one.</p>
+
+      <div id="event-name-hint" class="govuk-hint">
+  We'll use this to suggest learning and career development opportunities that are relevant to you
+</div>
+
+      <form class="form" action="/profession" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {% set textHtml %}
+        {{ govukInput({
+          id: "other",
+          name: "other",
+          type: "other",
+          autocomplete: "tel",
+          classes: "govuk-!-width-two-third",
+          label: {
+            text: "Enter grade"
+          }
+        }) }}
+        {% endset -%}
+
+        {{ govukRadios({
+          name: "where-do-you-live",
+          fieldset: {
+
+          },
+          items: [
+            {
+              value: "Administrative Assistant (AA) Equivalent",
+              text: "Administrative Assistant (AA) Equivalent"
+            },
+            {
+              value: "Administrative Officer (AO) Equivalent",
+              text: "Administrative Officer (AO) Equivalent"
+            },
+            {
+              value: "Executive Officer (EO) Equivalent",
+              text: "Executive Officer (EO) Equivalent"
+            },
+            {
+              value: "Higher Executive Officer (HEO)",
+              text: "Higher Executive Officer (HEO)"
+            },
+            {
+              value: "Grade 7 Equivalent",
+              text: "Grade 7 Equivalent"
+            },
+            {
+              value: "Grade 6 Equivalent",
+              text: "Grade 6 Equivalent"
+            },
+            {
+              value: "Senior Civil Servant - Deputy Director (PB1/1A)",
+              text: "Senior Civil Servant - Deputy Director (PB1/1A)"
+            },
+            {
+              value: "Senior Civil Servant - Director (PB2)",
+              text: "Senior Civil Servant - Director (PB2)"
+            },
+            {
+              value: "Senior Civil Servant - Director General (PB3)",
+              text: "Senior Civil Servant - Director General (PB3)"
+            },
+            {
+              value: "Senior Civil Servant - Permanent Secretary",
+              text: "Senior Civil Servant - Permanent Secretary"
+            },
+            {
+                  value: "other",
+                  text: "Other",
+                  conditional: {
+                    html: textHtml
+                  }
+                }
+          ]
+        }) }}
+
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
