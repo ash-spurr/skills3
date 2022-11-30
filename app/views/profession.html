@@ -12,9 +12,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Create an account - Grade</h1>
+      <h1 class="govuk-heading-l">Create an account - Profession</h1>
 
-      <p>Select your grade. You may only choose one.</p>
+      <p>Select the profession(s) that you belong to. You may choose more than oneit</p>
 
       <div id="event-name-hint" class="govuk-hint">
   We'll use this to suggest learning and career development opportunities that are relevant to you
@@ -22,75 +22,119 @@
 
       <form class="form" action="/privacypolicy" method="post">
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-        {% from "govuk/components/input/macro.njk" import govukInput %}
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+        {{ govukCheckboxes({
 
-        {% set textHtml %}
-        {{ govukInput({
-          id: "other",
-          name: "other",
-          type: "other",
-          autocomplete: "tel",
-          classes: "govuk-!-width-two-third",
-          label: {
-            text: "Enter grade"
-          }
-        }) }}
-        {% endset -%}
-
-        {{ govukRadios({
-          name: "where-do-you-live",
-          fieldset: {
-
-          },
           items: [
             {
-              value: "Administrative Assistant (AA) Equivalent",
-              text: "Administrative Assistant (AA) Equivalent"
+              value: "Corporate Finance Profession",
+              text: "Corporate Finance Profession"
             },
             {
-              value: "Administrative Officer (AO) Equivalent",
-              text: "Administrative Officer (AO) Equivalent"
+              value: "Counter-fraud Standards and Profession",
+              text: "Counter-fraud Standards and Profession"
             },
             {
-              value: "Executive Officer (EO) Equivalent",
-              text: "Executive Officer (EO) Equivalent"
+              value: "Digital, Data and Technology Professions",
+              text: "Digital, Data and Technology Professions"
             },
             {
-              value: "Higher Executive Officer (HEO)",
-              text: "Higher Executive Officer (HEO)"
+              value: "Government Communication Service",
+              text: "Government Communication Service"
             },
             {
-              value: "Grade 7 Equivalent",
-              text: "Grade 7 Equivalent"
+              value: "Government Economic Service",
+              text: "Government Economic Service"
             },
             {
-              value: "Grade 6 Equivalent",
-              text: "Grade 6 Equivalent"
+              value: "Government Finance Profession",
+              text: "Government Finance Profession"
             },
             {
-              value: "Senior Civil Servant - Deputy Director (PB1/1A)",
-              text: "Senior Civil Servant - Deputy Director (PB1/1A)"
+              value: "Government IT Profession",
+              text: "Government IT Profession"
             },
             {
-              value: "Senior Civil Servant - Director (PB2)",
-              text: "Senior Civil Servant - Director (PB2)"
+              value: "Government Knowledge and Information Management Profession",
+              text: "Government Knowledge and Information Management Profession"
             },
             {
-              value: "Senior Civil Servant - Director General (PB3)",
-              text: "Senior Civil Servant - Director General (PB3)"
+              value: "Government Legal Profession",
+              text: "Government Legal Profession"
             },
             {
-              value: "Senior Civil Servant - Permanent Secretary",
-              text: "Senior Civil Servant - Permanent Secretary"
+              value: "Government Occupational Psychology Profession",
+              text: "Government Occupational Psychology Profession"
             },
             {
-                  value: "other",
-                  text: "Other",
-                  conditional: {
-                    html: textHtml
-                  }
-                }
+              value: "Government Operational Research Service",
+              text: "Government Operational Research Service"
+            },
+            {
+              value: "Government Planning Inspectors",
+              text: "Government Planning Inspectors"
+            },
+            {
+              value: "Government Planning Profession",
+              text: "Government Planning Profession"
+            },
+            {
+              value: "Government Property Profession",
+              text: "Government Property Profession"
+            },
+            {
+              value: "Government Security Profession",
+              text: "Government Security Profession"
+            },
+            {
+              value: "Government Science and Engineering Profession",
+              text: "Government Science and Engineering Profession"
+            },
+            {
+              value: "Government Social Research Profession",
+              text: "Government Social Research Profession"
+            },
+            {
+              value: "Government Statistical Service Profession",
+              text: "Government Statistical Service Profession"
+            },
+            {
+              value: "Government Tax Profession",
+              text: "Government Tax Profession"
+            },
+            {
+              value: "Government Veterinary Profession",
+              text: "Government Veterinary Profession"
+            },
+            {
+              value: "Human Resources Profession",
+              text: "Human Resources Profession"
+            },
+            {
+              value: "Intelligence Analysis",
+              text: "Intelligence Analysis"
+            },
+            {
+              value: "Internal Audit Profession",
+              text: "Internal Audit Profession"
+            },
+            {
+              value: "Operational Delivery Profession",
+              text: "Operational Delivery Profession"
+            },
+            {
+              value: "Policy Profession",
+              text: "Policy Profession"
+            },
+            {
+              value: "Procurement Profession",
+              text: "Procurement Profession"
+            },
+            {
+              value: "Project Delivery Profession",
+              text: "Project Delivery Profession"
+            }
+
           ]
         }) }}
 
