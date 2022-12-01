@@ -21,7 +21,8 @@ We'll use this to suggest learning and career development opportunities that are
 </div>
 
     <form class="form" action="/current-contract" method="post">
-
+      
+      <div class="govuk-grid-row">
 <h2 class="govuk-heading-m">Language one</h2>
       <label class="govuk-label" for="job">Select a language:</label>
       <select class="js-autocomplete" name="js-autocomplete" id="js-autocomplete">
@@ -30,39 +31,85 @@ We'll use this to suggest learning and career development opportunities that are
         <option value="job:AE-AZ">German</option>
         <option value="job:AE-AZ">Spanish</option>
       </select>
-
-
-<p>Select a language</p>
-
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-
-      {{ govukRadios({
-        name: "speaking",
-        fieldset: {
-
-        },
-        items: [
-          {
-            value: "Permanent",
-            text: "Permanent"
+      </div>
+      <main class="govuk-main-wrapper">
+      <div class="govuk-grid-row">
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {{ govukRadios({
+          
+          name: "speaking",
+          fieldset: {
+            legend: {
+              text: "Speaking"
+            }
           },
-          {
-            value: "Fixed term ",
-            text: "Fixed term"
+          
+          items: [
+            {
+              value: "Basic",
+      text: "Basic",
+      hint: {
+        text: "You can understand and use basic phrases, introduce yourself and describe in simple terms aspects of your background and environment"
+      }
+            },
+            {
+              value: "Independent",
+      text: "Independent",
+      hint: {
+        text: "You can deal with most situations likely to arise while travellingi an area where the language is spoken and interact with a degree of fluency."
+      }
+            },
+            {
+              value: "Proficient",
+      text: "Proficient",
+      hint: {
+        text: "You can express fluently and spontaneously and can use the language flexibly for social, academic and professional purposes."
+      }
+            }
+          ]
+        }) }}
+      </div>
+
+      <div class="govuk-grid-row">
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {{ govukRadios({
+          
+          name: "Writing",
+          fieldset: {
+            legend: {
+              text: "Writing"
+            }
           },
-          {
-            value: "Agency",
-            text: "Agency"
-          }
+          
+          items: [
+            {
+              value: "Basic",
+      text: "Basic",
+      hint: {
+        text: "You can understand and use basic phrases, introduce yourself and describe in simple terms aspects of your background and environment"
+      }
+            },
+            {
+              value: "Independent",
+      text: "Independent",
+      hint: {
+        text: "You can produce clear, detailed text on a wide range of subjects and explain the advantages and disadvantages of a topical issue"
+      }
+            },
+            {
+              value: "Proficient",
+      text: "Proficient",
+      hint: {
+        text: "You can produce clear, well-structured, detailed text on complex subjects and can express yourself fluently and precisely"
+      }
+            }
+          ]
+        }) }}
+      </div>
 
+      <p><a href="#">Add language</a></p>
+      <p><a href="#">Skip this step</a></p>
 
-        ]
-      }) }}
-
-
-
-<main class="govuk-main-wrapper">
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 </main>
