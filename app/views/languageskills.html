@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Create a profile - Language skills</h1>
+
+    <p>Add any languages that you use. You can change or add to these later</p>
+
+    <div id="event-name-hint" class="govuk-hint">
+We'll use this to suggest learning and career development opportunities that are relevant to you
+</div>
+
+    <form class="form" action="/current-contract" method="post">
+
+<h2 class="govuk-heading-m">Language one</h2>
+      <label class="govuk-label" for="job">Select a language:</label>
+      <select class="js-autocomplete" name="js-autocomplete" id="js-autocomplete">
+        <option value="null"></option>
+        <option value="job:AE-AZ">English</option>
+        <option value="job:AE-AZ">German</option>
+        <option value="job:AE-AZ">Spanish</option>
+      </select>
+
+
+<p>Select a language</p>
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+      {{ govukRadios({
+        name: "speaking",
+        fieldset: {
+
+        },
+        items: [
+          {
+            value: "Permanent",
+            text: "Permanent"
+          },
+          {
+            value: "Fixed term ",
+            text: "Fixed term"
+          },
+          {
+            value: "Agency",
+            text: "Agency"
+          }
+
+
+        ]
+      }) }}
+
+
+
+<main class="govuk-main-wrapper">
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</main>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
