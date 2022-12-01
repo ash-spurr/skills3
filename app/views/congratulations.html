@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-panel govuk-panel--interruption">
+        <fieldset class="govuk-fieldset" aria-describedby="start_new_claim">
+          <form class="form" action="/languageskills" method="post">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-heading-l" id="start_new_claim">
+                Congratulations, you are now signed up to the Skills and Learning service.
+              </h1>
+            </legend>
+
+    <p>You will now be taken to your dashboard where you can navigate around the service.</p>
+
+
+
+        </fieldset>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
