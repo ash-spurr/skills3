@@ -1,0 +1,311 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-6">
+  <div>
+    <img style="vertical-align:middle" src="/public/images/skills-icon.png">
+    <span class="skillshead2">Skills</span>
+  </div></div>
+
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% set pastDayHtml %}
+<h2 class="govuk-heading-l">Welcome</h2>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="boxpanelimg">
+      <h2 class="govuk-heading-m">Get started<br>with recording your skills</h2>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+      {{ govukButton({
+        text: "Add skills"
+      }) }}
+
+  </div></div></div>
+    
+    <div class="govuk-!-padding-bottom-6"></div>
+  <div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="boxpanel">
+    <h2 class="govuk-heading-m">Your recent skills</h2>
+    <p>Agile working</p>
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <p>Data science</p>
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <p>Testing</p>
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+  text: "View my skills"
+}) }}
+</div></div>
+
+<div class="govuk-grid-column-one-third">
+  <div class="boxpanel">
+  <h2 class="govuk-heading-m">Relevant learning based on your skills</h2>
+  <p>Forecasting (External link)<br>Duration: 85 mins</p>
+  <hr class="govuk-section-break govuk-section-break--visible">
+  <p>Discover the skills to create accurate forecasts and to make sure they are adopted and used by your organisation. Read more</p>
+
+</div></div>
+
+<div class="govuk-grid-column-one-third">
+  <div class="boxpanel">
+  <h2 class="govuk-heading-m">Know more than
+    one language?</h2>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+text: "Add language"
+}) }}
+
+</div></div></div>
+
+{% endset -%}
+
+
+
+{% set pastWeekHtml %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+text: "Add a skill"
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Sort by"
+  },
+  items: [
+    {
+      value: "published",
+      text: "Recently published"
+    },
+    {
+      value: "updated",
+      text: "Recently updated",
+      selected: true
+    },
+    {
+      value: "views",
+      text: "Most views"
+    },
+    {
+      value: "comments",
+      text: "Most comments"
+    }
+  ]
+}) }}
+
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Skill</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Level</th>
+      <th scope="col" class="govuk-table__header app-custom-class">To develop</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Validated</th>
+      <th scope="col" class="govuk-table__header app-custom-class"></th>
+      <th scope="col" class="govuk-table__header app-custom-class"></th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Agile working</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag">
+        Completed
+      </strong></td>
+      <td class="govuk-table__cell"><img style="vertical-align:middle" src="/public/images/tick.jpg"></td>
+      <td class="govuk-table__cell"><img style="vertical-align:middle" src="/public/images/tick.jpg"></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Edit</a></p></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Remove</a></p></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Agile working</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag">
+        Completed
+      </strong></td>
+      <td class="govuk-table__cell"><img style="vertical-align:middle" src="/public/images/tick.jpg"></td>
+      <td class="govuk-table__cell"><img style="vertical-align:middle" src="/public/images/tick.jpg"></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Edit</a></p></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Remove</a></p></td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Agile working</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag">
+        Completed
+      </strong></td>
+      <td class="govuk-table__cell"><img style="vertical-align:middle" src="/public/images/tick.jpg"></td>
+      <td class="govuk-table__cell"><img style="vertical-align:middle" src="/public/images/tick.jpg"></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Edit</a></p></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Remove</a></p></td>
+
+    </tr>
+    
+
+  </tbody>
+</table>
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  previous: {
+    href: "#"
+  },
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#"
+    },
+    {
+      number: 2,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
+
+{% endset -%}
+
+
+
+
+{% set pastMonthHtml %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+text: "Add a language"
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Sort by"
+  },
+  items: [
+    {
+      value: "published",
+      text: "Recently published"
+    },
+    {
+      value: "updated",
+      text: "Recently updated",
+      selected: true
+    },
+    {
+      value: "views",
+      text: "Most views"
+    },
+    {
+      value: "comments",
+      text: "Most comments"
+    }
+  ]
+}) }}
+
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Skill</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Speaking level</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Writing level</th>
+      <th scope="col" class="govuk-table__header app-custom-class">To develop</th>
+      <th scope="col" class="govuk-table__header app-custom-class"></th>
+      <th scope="col" class="govuk-table__header app-custom-class"></th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">English</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag">Native</strong></td>
+      <td class="govuk-table__cell"><strong class="govuk-tag">Native</strong></td>
+      <td class="govuk-table__cell"><img style="vertical-align:middle" src="/public/images/tick.jpg"></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Edit</a></p></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Remove</a></p></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">German</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag">Independent</strong></td>
+      <td class="govuk-table__cell"><strong class="govuk-tag">Basic</strong></td>
+      <td class="govuk-table__cell"><img style="vertical-align:middle" src="/public/images/tick.jpg"></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Edit</a></p></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Remove</a></p></td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Spanish</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag">Basic</strong></td>
+      <td class="govuk-table__cell"><strong class="govuk-tag">Basic</strong></td>
+      <td class="govuk-table__cell"><img style="vertical-align:middle" src="/public/images/tick.jpg"></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Edit</a></p></td>
+      <td class="govuk-table__cell"><p class="govuk-body"><a href="#" class="govuk-link">Remove</a></p></td>
+
+    </tr>
+    
+
+  </tbody>
+</table>
+
+
+
+{% endset -%}
+
+
+
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Welcome",
+      id: "past-day",
+      panel: {
+        html: pastDayHtml
+      }
+    },
+    {
+      label: "Skills",
+      id: "past-week",
+      panel: {
+        html: pastWeekHtml
+      }
+    },
+    {
+      label: "Languages",
+      id: "past-month",
+      panel: {
+        html: pastMonthHtml
+      }
+    }
+  ]
+}) }}
+
+{% endblock %}

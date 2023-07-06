@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Welcome, Jo</h1>
+<p class="govuk-body-l">Use this service to:<br>• Add and review your skills and learning records<br>• Find opportunities and plan your career<br>• Keep up to date with communities</p>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+
+
+
+  <div class="govuk-grid-column-one-third">
+
+
+    <div class="govuk-!-padding-bottom-6">
+    <div>
+      <img style="vertical-align:middle" src="/public/images/skills-icon.png">
+      <span class="skillshead">Skills</span>
+    </div></div>
+    <p>Update your skills profile to record your current skills and ones you would like to develop.</p>
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+  text: "Review skills",
+  href: "/skills-welcome.html"
+}) }}
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+<div class="govuk-!-padding-bottom-6">
+  <div>
+    <img style="vertical-align:middle" src="/public/images/careers.png">
+    <span class="careershead">Careers</span>
+  </div></div>
+  <p>View current job vacancies and find out what career pathways are available.</p>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+text: "Plan your career"
+}) }}
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  </div>
+  
+
+
+  <div class="govuk-grid-column-one-third">
+
+
+    <div class="govuk-!-padding-bottom-6">
+    <div>
+      <img style="vertical-align:middle" src="/public/images/learning.png">
+      <span class="learninghead">Learning</span>
+    </div></div>
+    <p>Add learning and explore the wide variety of learning and training resources available.</p>
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+  text: "Review learning",
+  href: "/skills.html"
+
+}) }}
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+<div class="govuk-!-padding-bottom-6">
+  <div>
+    <img style="vertical-align:middle" src="/public/images/communities.png">
+    <span class="communitieshead">Communities</span>
+  </div></div>
+  <p>Discuss ideas and share best practice with your peers.<br><br>
+  </p>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+text: "Access Communities"
+}) }}
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  <div class="govuk-notification-banner" role="region"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Latest notifications
+    </h2>
+  </div>
+
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-body-s">You currently have no skills on your profile. Try adding a new skill</p>
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <p class="govuk-body-s">New post in Agile tips and tricks</p>
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <p class="govuk-body-s">Beginners Guide to Business Analysis added to the learning catalogue</p>
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <p class="govuk-body-s">You need to complete Resilience and Wellbeing required learning</p>
+    <hr class="govuk-section-break govuk-section-break--visible">
+  
+</div>
+
+
+
+
+{% endblock %}

@@ -5956,3 +5956,73 @@ x:-moz-any-link {
 .govuk-panel--interruption .govuk-button:hover {
   background-color: #f3f2f1;
 }
+
+.skillshead {
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 1.5rem;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  color: #144E81;
+  line-height: 1.1111111111;
+}
+
+.learninghead {
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 1.5rem;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  color: #80224D;
+  line-height: 1.1111111111;
+}
+
+.careershead {
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 1.5rem;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  color: #265451;
+  line-height: 1.1111111111;
+}
+
+.communitieshead {
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 1.5rem;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  color: #594D00;
+  line-height: 1.1111111111;
+}
+
+.skillshead2 {
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 2.25rem;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  color: #144E81;
+  line-height: 1.1111111111;
+}
+
+.boxpanel {
+  border: 1px solid #b1b4b6;
+  padding: 1em;
+}
+
+.boxpanelimg {
+  border: 1px solid #b1b4b6;
+  padding: 1em;
+  background-image: url("/public/images/skillsbanner.jpg");
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
